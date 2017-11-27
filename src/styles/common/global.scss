@@ -1,0 +1,40 @@
+@import "../common/variables.scss";
+@import "../common/mixins.scss";
+
+body {
+  overflow-x: hidden;
+  @include body-font;
+}
+
+p {
+  font-size: 14px;
+  line-height: 1.75;
+}
+
+a,
+a:hover,
+a:focus,
+a:active,
+a.active {
+  outline: none;
+}
+
+a {
+  color: $theme-primary;
+}
+
+a:hover,
+a:focus,
+a:active,
+a.active {
+  color: darken($theme-primary, 10%);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @include heading-font;
+  font-weight: 700;
+}
+
+.img-centered {
+  margin: 0 auto;
+}

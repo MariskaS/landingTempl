@@ -1,0 +1,10 @@
+@import "../common/variables.scss";
+@import "../common/mixins.scss";
+
+.bg-light-gray {
+  background-color: $gray-lighter;
+}
+
+.bg-darkest-gray {
+  background-color: $gray-darker;
+}
