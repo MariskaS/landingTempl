@@ -3,7 +3,7 @@
 
 .btn {
   height: @height-control;
-  line-height: calc(@height-control - @spacing-base-half*2 - 2px);
+  line-height: calc(@height-control - @spacing-base-half*2);
   padding: @spacing-base-half @spacing-base;
   border-radius: @border-radius-base;
   text-transform: none;
@@ -11,6 +11,10 @@
   font-weight: 400;
   vertical-align: middle;
   user-select: none;
+
+  &:not(.btn-outline) {
+    border: 0;
+  }
 
   &:not(.btn-link) {
     padding-right: 30px;
@@ -22,6 +26,7 @@
   &.active,
   &:active:focus {
     outline: none;
+    box-shadow: none;
   }
 }
 
@@ -30,6 +35,6 @@
   .button-variant(@color-white, @color-theme-orange, @color-theme-orange);
 }
 
-.btn-outline-white {
+.btn-outline {
   .button-variant(@color-white, transparent, @color-white);
 }
