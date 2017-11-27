@@ -1,0 +1,35 @@
+@import "../common/variables";
+@import "../common/mixins/mixins-config";
+
+.btn {
+  height: @height-control;
+  line-height: calc(@height-control - @spacing-base-half*2 - 2px);
+  padding: @spacing-base-half @spacing-base;
+  border-radius: @border-radius-base;
+  text-transform: none;
+  font-size: @font-size-base;
+  font-weight: 400;
+  vertical-align: middle;
+  user-select: none;
+
+  &:not(.btn-link) {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+
+  &:focus,
+  &:active,
+  &.active,
+  &:active:focus {
+    outline: none;
+  }
+}
+
+// Color
+.btn-primary {
+  .button-variant(@color-white, @color-theme-orange, @color-theme-orange);
+}
+
+.btn-outline-white {
+  .button-variant(@color-white, transparent, @color-white);
+}

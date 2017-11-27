@@ -1,0 +1,162 @@
+@import "../common/variables";
+@import "../common/mixins/mixins-config";
+
+// Scrollbar
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: @color-gray-dark;
+}
+
+::-webkit-scrollbar-track {
+  background: @color-gray-lighter;
+}
+
+// Selection
+::selection {
+  text-shadow: none;
+  background: @color-theme-orange;
+  color: @color-white;
+}
+
+::-moz-selection {
+  text-shadow: none;
+  background: @color-theme-orange;
+}
+
+img::selection {
+  background: transparent;
+}
+
+img::-moz-selection {
+  background: transparent;
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
+  webkit-tap-highlight-color: @color-theme-orange;
+}
+
+p {
+  font-size: @font-size-base;
+  line-height: normal;
+}
+
+a,
+a:hover,
+a:focus,
+a:active,
+a.active {
+  outline: none;
+}
+
+a {
+  color: @color-theme-orange;
+}
+
+a:hover,
+a:focus,
+a:active,
+a.active {
+  color: darken(@color-theme-orange, 10%);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+}
+
+.img-centered {
+  margin: 0 auto;
+}
+
+label {
+  font-weight: 400;
+}
+
+.app-main {
+  display: block;
+  height: 100%;
+  overflow-x: auto;
+}
+
+// Head
+.app-head {
+  background-image: url('../../assets/img/header-bg.jpg');
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  background-size: cover;
+
+  &__info {
+    padding: 100px 0;
+    margin-bottom: @spacing-base;
+
+    h1 {
+      font-size: @font-size-xxx;
+      font-weight: 700;
+    }
+
+    h2 {
+      font-size: @font-size-xx;
+    }
+  }
+
+  .u-list {
+    margin: @spacing-base 0;
+  }
+}
+
+// Section
+.app-section {
+  padding: 60px 0;
+
+  h2 {
+
+  }
+
+  h3 {
+    font-weight: 400;
+  }
+
+  @media(min-width: 768px) {
+    & {
+      padding: 100px 0;
+    }
+  }
+}
+
+// Footer
+.app-footer {
+  .u-bg-blue;
+  text-align: center;
+  padding: @spacing-base 0;
+
+  &__row {
+    .mixin-flex-column;
+    .mixin-flex-start-center;
+  }
+
+  &__col {
+    width: 100%;
+  }
+
+  @media(min-width: 768px) {
+    & {
+      text-align: left;
+
+      &__row {
+        .mixin-flex-row;
+      }
+      &__col {
+        flex: 1;
+
+        &:last-child {
+          text-align: right;
+        }
+      }
+    }
+  }
+}

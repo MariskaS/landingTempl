@@ -1,0 +1,39 @@
+@import "../common/variables";
+@import "../common/mixins/mixins-config";
+
+.u-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+// Colors
+.u-bg-blue {
+  background-color: @color-theme-blue;
+  color: @color-white;
+
+  a {
+    color: @color-white;
+    text-decoration: underline;
+
+    &:focus,
+    &:hover {
+      color: @color-white;
+      text-decoration: none;
+    }
+  }
+}
+
+// Btn
+.u-btn-block {
+  @media (max-width: 992px) {
+    &-md {
+      display: block;
+      width: 100%;
+
+      &:not(:first-child) {
+        margin-top: @spacing-base-half;
+      }
+    }
+  }
+}
