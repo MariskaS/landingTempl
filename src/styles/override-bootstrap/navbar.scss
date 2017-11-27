@@ -1,10 +1,11 @@
-@import "../common/variables.scss";
-@import "../common/mixins.scss";
-
+@import "../common/variables";
+@import "../common/mixins/mixins.config";
 // Custom Navigation Bar
 .navbar-custom {
   background-color: $gray-darker;
   border-color: transparent;
+  min-height: $navbar-height;
+
   .navbar-brand {
     color: $theme-primary;
     @include script-font;

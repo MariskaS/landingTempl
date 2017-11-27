@@ -1,9 +1,27 @@
-@import "../common/variables.scss";
-@import "../common/mixins.scss";
+@import "../common/variables";
+@import "../common/mixins/mixins.config";
+
+::selection {
+  background-color: $color-gray-lighter;
+  color: $color-white;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $color-gray-dark;
+}
+
+::-webkit-scrollbar-track {
+  background: $color-gray-lighter;
+}
 
 body {
-  overflow-x: hidden;
   @include body-font;
+  height: 100vh;
+  overflow: hidden;
 }
 
 p {
@@ -37,4 +55,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .img-centered {
   margin: 0 auto;
+}
+
+.app-main {
+  display: block;
+  height: 100%;
+  overflow-x: auto;
 }
