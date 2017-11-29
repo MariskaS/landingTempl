@@ -10,6 +10,7 @@
   img {
     display: block;
     max-width: 100%;
+    width: 100%;
     height: auto;
   }
 
@@ -53,5 +54,15 @@
 
   &:hover {
     box-shadow: @shadow-card;
+  }
+}
+
+@media (max-width: 768px) {
+  .app-card {
+    max-width: 400px;
+
+    &:not(.app-last) {
+      margin: 0 auto @spacing-base;
+    }
   }
 }
