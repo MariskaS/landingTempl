@@ -53,3 +53,21 @@
 .u-margin-bottom-double {
   margin-bottom: @spacing-double;
 }
+
+// List
+.u-list-ndash {
+  list-style-type: none;
+  padding: 0;
+
+  li {
+    .mixin-flex-row;
+
+    &:not(:first-child) {
+      margin-top: @spacing-base-half;
+    }
+
+    span {
+      margin-right: 5px;
+    }
+  }
+}

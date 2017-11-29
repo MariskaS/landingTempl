@@ -4,16 +4,19 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { ModalComponent } from './modal/modal.component';
 import { CardImgComponent } from './card-img/card-img.component';
+import { CardComponent } from './card/card.component';
 
 @NgModule({
   exports: [
     ModalComponent,
-    CardImgComponent
+    CardImgComponent,
+    CardComponent
   ],
   declarations: [
     AppComponent,
     ModalComponent,
-    CardImgComponent
+    CardImgComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule

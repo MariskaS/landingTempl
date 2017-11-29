@@ -6,6 +6,7 @@
 .app-card {
   border-radius: @border-radius-base;
   overflow: hidden;
+  background-color: @color-white;
 
   img {
     display: block;
@@ -14,55 +15,79 @@
     height: auto;
   }
 
-  &__img {
-    position: relative;
-    display: block;
-
-    .app-card-title {
-      position: absolute;
-      top: @spacing-base;
-      left: @spacing-base;
-      .mixin-font-rob-black;
-      font-size: @font-card-title;
-      color: @color-white;
-      text-decoration: underline;
-      text-decoration-color: rgba(255, 255, 255, .6);
-    }
-
-    &:hover {
-      .app-card-title {
-        text-decoration: none;
-      }
-    }
-  }
-
   &__content {
     padding: @spacing-base;
     border: 1px solid @color-gray-light;
-    border-top-width: 0;
   }
 
-  &__detail {
-    .mixin-font-rob-reg;
-    color: @color-gray;
-    margin-bottom: @spacing-base;
+  @media (max-width: 768px) {
+    & {
+      max-width: 400px;
 
-    span {
-      padding-left: 4px;
+      &:not(.app-last) {
+        margin: 0 auto @spacing-base;
+      }
     }
-  }
-
-  &:hover {
-    box-shadow: @shadow-card;
   }
 }
 
-@media (max-width: 768px) {
+.app-card-img {
   .app-card {
-    max-width: 400px;
+    &__img {
+      position: relative;
+      display: block;
 
-    &:not(.app-last) {
-      margin: 0 auto @spacing-base;
+      .app-card-title {
+        position: absolute;
+        top: @spacing-base;
+        left: @spacing-base;
+        .mixin-font-rob-black;
+        font-size: @font-card-title;
+        color: @color-white;
+        text-decoration: underline;
+        text-decoration-color: rgba(255, 255, 255, .6);
+      }
+
+      &:hover {
+        .app-card-title {
+          text-decoration: none;
+        }
+      }
+    }
+
+    &__content {
+      padding: @spacing-base;
+      border-color: @color-gray-light;
+      border-top-width: 0;
+    }
+
+    &__detail {
+      .mixin-font-rob-reg;
+      color: @color-gray;
+      margin-bottom: @spacing-base;
+
+      span {
+        padding-left: 4px;
+      }
+    }
+
+    &:hover {
+      box-shadow: @shadow-card;
+    }
+  }
+}
+
+.app-card-border {
+  .app-card {
+    &__content {
+      border-color: @color-orange;
+      border-radius: @border-radius-base;
+    }
+
+    &__title {
+      .mixin-font-rob-black;
+      font-size: @font-size-x;
+      margin: 0 0 @spacing-base;
     }
   }
 }
