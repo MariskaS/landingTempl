@@ -10,7 +10,7 @@
 // Colors
 .u-bg {
   &-blue {
-    background-color: @color-theme-blue;
+    background-color: @color-theme-blue !important;
     color: @color-white;
 
     a {
@@ -23,6 +23,11 @@
         text-decoration: none;
       }
     }
+  }
+
+  &-orange {
+    background-image: linear-gradient(-180deg, #d35c2b 0%, #f76b1c 100%) !important;
+    color: @color-white;
   }
 
   &-i {

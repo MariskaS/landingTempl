@@ -26,6 +26,10 @@
     padding: @spacing-base;
   }
 
+  &__footer {
+    padding: @spacing-base;
+  }
+
   // For mobile
   @media (min-width: 768px) and (max-width: 992px) {
     & {
@@ -59,7 +63,12 @@
   }
 
   .app-card {
+    .mixin-flex-column;
     flex: 1;
+
+    &__content {
+      flex: 1;
+    }
   }
 }
 
@@ -110,6 +119,35 @@
   }
 }
 
+.app-card-img--full {
+  .app-card {
+    &__img {
+      position: relative;
+      display: block;
+
+      .app-card-title,
+      .app-card-txt {
+        position: absolute;
+        color: @color-white;
+        font-size: 30px;
+      }
+
+      .app-card-title {
+        top: @spacing-base;
+        left: @spacing-base;
+        .mixin-font-rob-light;
+      }
+
+      .app-card-txt {
+        bottom: @spacing-base;
+        right: @spacing-base;
+        .mixin-font-rob-black;
+      }
+    }
+  }
+
+}
+
 .app-card-border {
   .app-card {
     border: 1px solid @color-theme-orange;
@@ -121,6 +159,31 @@
       border-radius: 0;
     }
   }
+}
+
+.app-card-border--blue {
+  color: @color-theme-blue;
+
+  .app-card-border;
+
+  .app-card {
+    border-color: @color-theme-blue;
+
+    &__title {
+      h5 {
+        .mixin-font-rob-tin;
+        font-size: 49px;
+      }
+    }
+
+    &__footer {
+      p {
+        .mixin-font-rob-reg;
+        font-size: @font-size-x;
+      }
+    }
+  }
+
 }
 
 .app-card-gray {
