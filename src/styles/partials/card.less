@@ -27,6 +27,7 @@
     padding: @spacing-base;
   }
 
+  // For mobile
   @media (max-width: 768px) {
     & {
       max-width: 400px;
@@ -35,6 +36,10 @@
 
       &:not(.app-last) {
         margin-bottom: @spacing-base;
+      }
+
+      [class*='app-i'] {
+        padding: 0;
       }
     }
   }
