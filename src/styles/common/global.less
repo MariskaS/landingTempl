@@ -1,6 +1,5 @@
 @import "../common/variables";
 @import "../common/mixins/mixins-config";
-
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900');
 
 // Scrollbar
@@ -38,14 +37,19 @@ img::-moz-selection {
 
 body {
   height: 100vh;
-  font-family: 'Roboto-Light', sans-serif;;
+  .mixin-font-rob-light;
   font-size: @font-size-base;
   webkit-tap-highlight-color: @color-theme-orange;
+}
+
+strong {
+  .mixin-font-rob-bold;
 }
 
 p {
   font-size: @font-size-base;
   line-height: normal;
+  margin: 0 0 4px;
 }
 
 a,
@@ -74,7 +78,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-family: 'Roboto-Bold', sans-serif;;
+  .mixin-font-rob-bold;
 }
 
 .img-centered {
@@ -83,6 +87,17 @@ h1 {
 
 label {
   font-weight: 400;
+}
+
+
+.app-title {
+  .mixin-font-rob-black;
+  font-size: @section-title;
+}
+
+.app-subtitle {
+  .mixin-font-rob-reg;
+  font-size: @section-subtitle;
 }
 
 .app-main {
@@ -125,17 +140,22 @@ label {
 .app-section {
   padding: 60px 0;
 
-  h2 {
+  &__title {
+    margin-bottom: @spacing-double;
+    text-align: center;
 
-  }
-
-  h3 {
-    font-weight: 400;
+    &:not(:first-child) {
+      margin-top: calc(@spacing-double*2);
+    }
   }
 
   @media (min-width: 768px) {
     & {
       padding: 100px 0;
+
+      &__title {
+        text-align: left;
+      }
     }
   }
 }
