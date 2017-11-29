@@ -1,27 +1,18 @@
 @import "../common/variables";
 @import "../common/mixins/mixins-config";
 
-.navbar-custom {
-  background-image:linear-gradient(-180deg, #1f3157 0%, #2b4478 100%);
-  border-color: transparent;
-  min-height: @navbar-height;
+@size-icon-bar: 28px;
 
-  .navbar-brand {
-    color: @color-theme-orange;
-    &:hover,
-    &:focus,
-    &:active,
-    &.active {
-      color: darken(@color-theme-orange, 10%);
-    }
-  }
-  .navbar-collapse {
-    border-color: fade-out(white, .02);
-  }
+.navbar-custom {
+  background-color: @color-theme-blue;
+  border: 0;
+  border-radius: 0;
+  line-height: 1;
+  min-height: auto;
+
   .navbar-toggle {
     background-color: @color-theme-orange;
     border-color: @color-theme-orange;
-    @include heading-font;
     color: white;
     font-size: 12px;
     &:hover,
@@ -29,39 +20,110 @@
       background-color: @color-theme-orange;
     }
   }
+
   .nav {
     li {
       a {
         font-weight: 400;
-        letter-spacing: 1px;
-        color: white;
+        font-family: 'Roboto-Medium', sans-serif;
+        color: @color-white;
+        opacity: .9;
+
+        &.is-active,
         &:hover,
         &:focus {
-          color: @color-theme-orange;
-          outline: none;
+          color: @color-white;
+          opacity: 1;
         }
       }
     }
   }
-  .navbar-nav>.active>a {
-    border-radius: 0;
-    color: white;
-    background-color: @color-theme-orange;
-  }
-  .navbar-nav>.active>a:hover,
-  .navbar-nav>.active>a:focus {
-    color: white;
-    background-color: darken(@color-theme-orange, 10%);
-  }
-}
 
-// Navbar Change on Scroll
-@media(min-width:768px) {
-  .navbar-custom.affix {
-    background-color: @gray-darker;
-    padding: 10px 0;
-    .navbar-brand {
-      font-size: 1.5em;
+  .app-navbar-info {
+    .mixin-contact-info;
+
+    .app-tel {
+      font-size: 22px !important;
+    }
+  }
+
+  @media (min-width: 768px) {
+    & {
+      .app-navbar {
+        .mixin-flex-row;
+        .mixin-flex-start-center;
+      }
+
+      .nav {
+        flex: 1;
+        li a {
+          height: @navbar-height;
+          border-top: 5px solid transparent;
+          padding-top: calc(15px - 3px);
+          padding-left: 0;
+          padding-right: 0;
+          margin-right: @spacing-base;
+
+          span {
+            .u-link-dotted-white;
+          }
+
+          &:hover,
+          &:focus {
+            span {
+              border-bottom-color: transparent;
+            }
+          }
+
+          &.is-active {
+            border-top-color: @color-orange;
+            span {
+              border-bottom-color: transparent;
+            }
+          }
+
+        }
+      }
+
+      .navbar-collapse {
+        padding: 0;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    & {
+      .nav {
+        li a {
+          &.is-active,
+          &:hover,
+          &:focus {
+            background-color: @color-hover-base;
+          }
+        }
+      }
+
+      .navbar-collapse {
+        border-top: 0;
+        border-color: @color-hover-base;
+
+        .app-navbar-info {
+          display: none;
+        }
+      }
+
+      .navbar-toggle {
+        float: none;
+        margin: 0 @spacing-base 0 0;
+        border-radius: 0;
+        font-size: @size-icon-bar;
+      }
+
+      .navbar-header {
+        .mixin-flex-row;
+        .mixin-flex-start-center;
+      }
     }
   }
 }
+

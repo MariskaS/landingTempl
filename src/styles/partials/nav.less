@@ -10,7 +10,7 @@
   .container {
     .mixin-flex-row;
     .mixin-flex-start-center;
-    height: @navbar-height;
+    height: @nav-height;
   }
 
   &__logo,
@@ -19,22 +19,6 @@
   }
 
   &__info {
-    text-align: right;
-    color: @color-white;
-
-    a {
-      display: block;
-      text-decoration: dotted;
-      font-family: 'Roboto-Light', sans-serif;
-      opacity: .9;
-      color: @color-white;
-      margin-left: 5px;
-
-      &.app-tel {
-        font-size: @font-size-tel;
-        font-family: 'Roboto-Black', sans-serif;
-        opacity: 1;
-      }
-    }
+    .mixin-contact-info;
   }
 }
