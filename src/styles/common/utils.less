@@ -82,9 +82,27 @@
   }
 }
 
-.u-padding-bottom {
-  &-0 {
-    padding-bottom: 0;
+.u-padding {
+  &-bottom {
+    &-0 {
+      padding-bottom: 0 !important;
+    }
+  }
+
+  &-top {
+    &-double {
+      padding-top: @spacing-double !important;
+    }
+  }
+
+  &__section {
+    padding: @spacing-double 0;
+
+    @media (min-width: 768px) {
+      & {
+        padding: calc(@spacing-double*2) 0;
+      }
+    }
   }
 }
 
