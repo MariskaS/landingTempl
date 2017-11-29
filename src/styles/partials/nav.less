@@ -1,0 +1,40 @@
+@import "../common/variables";
+@import "../common/mixins/mixins-config";
+
+@font-size-tel: 24px;
+
+.app-nav {
+  background-image: linear-gradient(-180deg, #1f3157 0%, #2b4478 100%);
+  line-height: 1;
+
+  .container {
+    .mixin-flex-row;
+    .mixin-flex-start-center;
+    height: @navbar-height;
+  }
+
+  &__logo,
+  &__info {
+    flex: 1;
+  }
+
+  &__info {
+    text-align: right;
+    color: @color-white;
+
+    a {
+      display: block;
+      text-decoration: dotted;
+      font-family: 'Roboto-Light', sans-serif;
+      opacity: .9;
+      color: @color-white;
+      margin-left: 5px;
+
+      &.app-tel {
+        font-size: @font-size-tel;
+        font-family: 'Roboto-Black', sans-serif;
+        opacity: 1;
+      }
+    }
+  }
+}

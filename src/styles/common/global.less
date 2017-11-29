@@ -38,7 +38,6 @@ img::-moz-selection {
 
 body {
   height: 100vh;
-  overflow: hidden;
   font-family: 'Roboto-Light', sans-serif;;
   font-size: @font-size-base;
   webkit-tap-highlight-color: @color-theme-orange;
@@ -59,6 +58,17 @@ a.active {
 
 a {
   color: @color-theme-orange;
+  text-decoration: none;
+}
+
+.app-link-dotted-white {
+  border-bottom: 1px dashed rgba(255,255,255,.9);
+  line-height: 1;
+  display: inline-block !important;
+
+  &:hover {
+    border-color: transparent;
+  }
 }
 
 a:hover,
@@ -88,7 +98,6 @@ label {
 .app-main {
   display: block;
   height: 100%;
-  overflow-x: auto;
 }
 
 // Head
@@ -100,7 +109,8 @@ label {
   background-size: cover;
 
   &__info {
-    padding: 124px 0 64px;
+    padding: 80px 0;
+    line-height: 1;
 
     h1 {
       font-size: @font-size-xxx;
