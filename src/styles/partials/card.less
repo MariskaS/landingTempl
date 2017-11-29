@@ -7,6 +7,7 @@
   border-radius: @border-radius-base;
   overflow: hidden;
   background-color: @color-white;
+  margin-bottom: @spacing-double;
 
   img {
     display: block;
@@ -28,13 +29,6 @@
 
   &__footer {
     padding: @spacing-base;
-  }
-
-  // For mobile
-  @media (min-width: 768px) and (max-width: 992px) {
-    & {
-      margin-bottom: @spacing-double;
-    }
   }
 
   @media (max-width: 768px) {
