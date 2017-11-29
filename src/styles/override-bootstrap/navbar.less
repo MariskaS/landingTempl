@@ -40,6 +40,7 @@
   }
 
   .app-navbar-info {
+    flex: 1;
     .mixin-contact-info;
 
     .app-tel {
@@ -47,6 +48,7 @@
     }
   }
 
+  // For desktop
   @media (min-width: 768px) {
     & {
       .app-navbar {
@@ -56,6 +58,8 @@
 
       .nav {
         flex: 1;
+        .mixin-flex-row;
+
         li a {
           height: @navbar-height;
           border-top: 5px solid transparent;
@@ -63,6 +67,7 @@
           padding-left: 0;
           padding-right: 0;
           margin-right: @spacing-base;
+          white-space: nowrap;
 
           span {
             .u-link-dotted-white;
@@ -88,9 +93,16 @@
       .navbar-collapse {
         padding: 0;
       }
+
+      .navbar-header {
+        .app-navbar-info {
+          display: none;
+        }
+      }
     }
   }
 
+  // For mobile
   @media (max-width: 768px) {
     & {
       .nav {
