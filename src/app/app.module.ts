@@ -7,7 +7,8 @@ import { CardImgComponent } from './card-img/card-img.component';
 
 @NgModule({
   exports: [
-    ModalComponent
+    ModalComponent,
+    CardImgComponent
   ],
   declarations: [
     AppComponent,

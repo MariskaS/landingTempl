@@ -1,8 +1,11 @@
 @import "../common/variables";
 @import "../common/mixins/mixins-config";
 
+@font-card-title: 18px;
+
 .app-card {
   border-radius: @border-radius-base;
+  overflow: hidden;
 
   img {
     display: block;
@@ -10,13 +13,46 @@
     height: auto;
   }
 
+  &__img {
+    position: relative;
+    display: block;
+
+    .app-card-title {
+      position: absolute;
+      top: @spacing-base;
+      left: @spacing-base;
+      font-family: 'Roboto-Black', sans-serif;
+      font-size: @font-card-title;
+      color: @color-white;
+      text-decoration: underline;
+      text-decoration-color: rgba(255, 255, 255, .6);
+    }
+
+    &:hover {
+      .app-card-title {
+        text-decoration: none;
+      }
+    }
+  }
+
   &__content {
     padding: @spacing-base;
+    border: 1px solid @color-gray-light;
+    border-top-width: 0;
   }
 
   &__detail {
     font-family: 'Roboto-Regular', sans-serif;
     color: @color-gray;
     margin-bottom: @spacing-base;
+
+    span {
+      padding-left: 4px;
+    }
+  }
+
+  &:hover {
+    box-shadow: @shadow-card;
+    cursor: pointer;
   }
 }
