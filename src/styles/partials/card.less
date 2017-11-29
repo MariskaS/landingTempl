@@ -16,7 +16,6 @@
     max-height: 214px;
   }
 
-
   &__title {
     .mixin-font-rob-black;
     font-size: @font-size-x;
@@ -25,6 +24,13 @@
 
   &__content {
     padding: @spacing-base;
+  }
+
+  // For mobile
+  @media (min-width: 768px) and (max-width: 992px) {
+    & {
+      margin-bottom: @spacing-double;
+    }
   }
 
   @media (max-width: 768px) {
@@ -36,10 +42,28 @@
       &:not(.app-last) {
         margin-bottom: @spacing-base;
       }
+
+      [class*='app-i'] {
+        padding: 0;
+      }
     }
   }
 }
 
+// Card flex
+.app-card__flex-grid {
+  .mixin-flex-row-wrap;
+
+  [class*='col-'] {
+    .mixin-flex-column;
+  }
+
+  .app-card {
+    flex: 1;
+  }
+}
+
+// Card Styles
 .app-card-img {
   .app-card {
     &__img {
@@ -88,7 +112,7 @@
 
 .app-card-border {
   .app-card {
-    border: 1px solid @color-orange;
+    border: 1px solid @color-theme-orange;
     border-radius: @border-radius-base;
     min-height: 240px;
 
@@ -99,14 +123,19 @@
   }
 }
 
-.app-card__flex-grid {
-  .mixin-flex-row-wrap;
-
-  [class*='col-'] {
-    .mixin-flex-column;
-  }
-
+.app-card-gray {
   .app-card {
-    flex: 1;
+    background-color: @color-gray-lighter;
+    min-height: 240px;
+
+    &__title {
+      font-size: @font-size-base;
+      height: 47px;
+      margin: @spacing-base 0 0;
+    }
+
+    .u-list {
+      font-size: @font-size-s;
+    }
   }
 }

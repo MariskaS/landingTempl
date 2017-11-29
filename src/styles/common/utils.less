@@ -8,18 +8,39 @@
 }
 
 // Colors
-.u-bg-blue {
-  background-color: @color-theme-blue;
-  color: @color-white;
-
-  a {
+.u-bg {
+  &-blue {
+    background-color: @color-theme-blue;
     color: @color-white;
-    text-decoration: underline;
 
-    &:focus,
-    &:hover {
+    a {
       color: @color-white;
-      text-decoration: none;
+      text-decoration: underline;
+
+      &:focus,
+      &:hover {
+        color: @color-white;
+        text-decoration: none;
+      }
+    }
+  }
+
+  &-i {
+    &-1 {
+      background-image: url(../../assets/img/icons/card_i_1.png);
+      .mixin-bg-base;
+    }
+    &-2 {
+      background-image: url(../../assets/img/icons/card_i_2.png);
+      .mixin-bg-base;
+    }
+    &-3 {
+      background-image: url(../../assets/img/icons/card_i_3.png);
+      .mixin-bg-base;
+    }
+    &-4 {
+      background-image: url(../../assets/img/icons/card_i_4.png);
+      .mixin-bg-base;
     }
   }
 }
@@ -63,12 +84,8 @@
 }
 
 // List
-.u-list-ndash {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-
-  li {
+.u-list {
+  > div {
     .mixin-flex-row;
 
     &:not(:first-child) {
@@ -78,5 +95,14 @@
     span {
       margin-right: 5px;
     }
+  }
+}
+
+// Center
+.u-center-md {
+
+  // For mobile
+  @media (max-width: 768px) {
+    text-align: center;
   }
 }
