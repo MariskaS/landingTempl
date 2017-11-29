@@ -78,52 +78,7 @@
     </div>
   </nav>
 
-  <!-- Services Section -->
-  <section class="app-section" id="services">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <h2 class="app-section__title">Title</h2>
-          <h3 class="app-section__subtitle">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid deserunt dolorum ipsa nesciunt. Aspernatur
-            consequatur distinctio eos exercitationem id natus nihil odit officia quae, quia quod repudiandae, sunt
-            veritatis voluptatem?
-          </h3>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
-                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i>
-                    </span>
-          <h4>Title</h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam
-            architecto quo inventore harum ex magni, dicta impedit.</p>
-        </div>
-        <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
-                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fa fa-laptop fa-stack-1x fa-inverse"></i>
-                    </span>
-          <h4>Title</h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam
-            architecto quo inventore harum ex magni, dicta impedit.</p>
-        </div>
-        <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
-                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
-                    </span>
-          <h4>Title</h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam
-            architecto quo inventore harum ex magni, dicta impedit.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Process -->
+  <!--  -->
   <section class="app-section" id="process" style="background: gainsboro">
     <div class="container">
       <div class="row">
@@ -220,13 +175,103 @@
     </div>
   </section>
 
+  <!-- Process 1 -->
+  <section class="app-section u-padding-bottom-0">
+    <div class="container">
+      <div class="row app-card-img">
+        <div class="col-xs-12 col-sm-4">
+          <app-card-img></app-card-img>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+          <app-card-img></app-card-img>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+          <app-card-img class="app-last"></app-card-img>
+          <!--TODO: move class to app-card-->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process 2-->
+  <section class="app-section">
+    <div class="container">
+      <div class="row app-section__title">
+        <div class="col-lg-12">
+          <h3 class="app-title">Порядок работы</h3>
+        </div>
+      </div>
+      <div class="row app-card-border app-card__flex-grid">
+        <div class="col-xs-12 col-sm-4">
+          <div class="app-card">
+            <div class="app-card__content">
+              <h4 class="app-card__title">Быстрее</h4>
+              <ul class="u-list-ndash">
+                <li>
+                  <span>&ndash;</span>
+                  <div>Приступаем к работам в течение 3-х дней.</div>
+                </li>
+                <li>
+                  <span>&ndash;</span>
+                  <div>Срок выполнения от 2-х дней.</div>
+                </li>
+                <li>
+                  <span>&ndash;</span>
+                  <div>Скорость оштукатуривания в 3 раза быстрее.</div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+          <div class="app-card">
+            <div class="app-card__content">
+              <h4 class="app-card__title">Дешевле</h4>
+              <ul class="u-list-ndash">
+                <li>
+                  <span>&ndash;</span>
+                  <div>Расходуется на 18% меньше штукатурной смеси</div>
+                </li>
+                <li>
+                  <span>&ndash;</span>
+                  <div>Требуется всего 2-3 специалиста</div>
+                </li>
+                <li>
+                  <span>&ndash;</span>
+                  <div>Стоимость смеси ниже на 32%</div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+          <div class="app-card app-last">
+            <div class="app-card__content">
+              <h4 class="app-card__title">Быстрее</h4>
+              <ul class="u-list-ndash">
+                <li>
+                  Благодаря автоматическому способу
+                  приготовления смесь имеет однородную консистенцию.
+                </li>
+                <li>
+                  Нанесение штукатурки под высоким давлением
+                  улучшает адгезию и качество нанесения.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Calculation Section -->
   <section class="app-section u-bg-blue" id="calculation">
     <div class="container">
-      <div class="row">
+      <div class="row app-section__title">
         <div class="col-lg-12">
-          <h3>Вызов замерщика</h3>
-          <p>Замерщик выезжает на объект для оценки бесплатно</p>
+          <h3 class="app-title">Вызов замерщика</h3>
+          <p class="app-subtitle">Замерщик выезжает на объект для оценки бесплатно</p>
         </div>
       </div>
       <div class="row">
@@ -271,6 +316,7 @@
     </div>
   </section>
 
+  <!-- Completed work 1 -->
   <section class="app-section u-padding-bottom-0">
     <div class="container">
       <div class="row app-section__title">
@@ -294,6 +340,7 @@
     </div>
   </section>
 
+  <!-- Completed work 2-->
   <section class="app-section">
     <div class="container">
       <div class="row app-section__title">
