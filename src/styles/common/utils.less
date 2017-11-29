@@ -40,7 +40,7 @@
 
 // Link
 .u-link-dotted-white {
-  border-bottom: 1px dashed rgba(255,255,255,.9);
+  border-bottom: 1px dashed rgba(255, 255, 255, .9);
   line-height: 1;
   display: inline-block !important;
 
@@ -50,8 +50,16 @@
 }
 
 // Spacing
-.u-margin-bottom-double {
-  margin-bottom: @spacing-double;
+.u-margin-bottom {
+  &-double {
+    margin-bottom: @spacing-double;
+  }
+}
+
+.u-padding-bottom {
+  &-0 {
+    padding-bottom: 0;
+  }
 }
 
 // List

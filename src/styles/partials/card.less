@@ -13,6 +13,7 @@
     max-width: 100%;
     width: 100%;
     height: auto;
+    max-height: 214px;
   }
 
   &__content {
@@ -23,9 +24,11 @@
   @media (max-width: 768px) {
     & {
       max-width: 400px;
+      width: 100%;
+      margin: 0 auto;
 
       &:not(.app-last) {
-        margin: 0 auto @spacing-base;
+        margin-bottom: @spacing-base;
       }
     }
   }
@@ -81,6 +84,7 @@
   .app-card {
     border: 1px solid @color-orange;
     border-radius: @border-radius-base;
+    min-height: 240px;
 
     &__content {
       border: 0;
@@ -100,5 +104,9 @@
 
   [class*='col-'] {
     .mixin-flex-column;
+  }
+
+  .app-card {
+    flex: 1;
   }
 }
