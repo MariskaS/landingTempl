@@ -79,9 +79,12 @@
 
 .app-card-border {
   .app-card {
+    border: 1px solid @color-orange;
+    border-radius: @border-radius-base;
+
     &__content {
-      border-color: @color-orange;
-      border-radius: @border-radius-base;
+      border: 0;
+      border-radius: 0;
     }
 
     &__title {
@@ -89,5 +92,13 @@
       font-size: @font-size-x;
       margin: 0 0 @spacing-base;
     }
+  }
+}
+
+.app-card__flex-grid {
+  .mixin-flex-row-wrap;
+
+  [class*='col-'] {
+    .mixin-flex-column;
   }
 }
