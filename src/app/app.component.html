@@ -272,33 +272,27 @@
       </div>
       <div class="row">
         <form id="contactForm" class="col-lg-12">
-          <div class="row">
+          <div class="row u-margin-bottom-base">
             <div class="col-xs-12 col-md-4 form-group">
               <label for="name">Контактное лицо</label>
               <input type="text"
                      class="form-control"
                      id="name"
-                     required
-                     data-validation-required-message="Поле не должно быть пустым"/>
-              <p class="help-block text-danger"></p>
+                     required/>
             </div>
             <div class="col-xs-12 col-md-4 form-group">
               <label for="phone">Номер телефона</label>
               <input type="tel"
                      class="form-control"
                      id="phone"
-                     required
-                     data-validation-required-message="Поле не должно быть пустым"/>
-              <p class="help-block text-danger"></p>
+                     required/>
             </div>
             <div class="col-xs-12 col-md-4 form-group">
               <label for="address">Адрес объекта (не обязательно)</label>
               <input type="text"
                      class="form-control"
                      id="address"
-                     required
-                     data-validation-required-message="Поле не должно быть пустым"/>
-              <p class="help-block text-danger"></p>
+                     required/>
             </div>
           </div>
           <div class="row">
@@ -406,6 +400,103 @@
         </div>
       </div>
     </div>
+  </section>
+
+  <!-- Calculation Order -->
+  <section class="app-section u-bg-blue u-padding__section">
+    <div class="container">
+      <div class="row app-section__title">
+        <div class="col-lg-12">
+          <h3 class="app-title">Заявка на расчет</h3>
+          <p class="app-subtitle">Просчитаем смету и перезвоним Вам в ближайшее время.</p>
+        </div>
+      </div>
+      <form id="orderForm">
+        <div class="row">
+          <div class="col-xs-12 col-md-6 form-group">
+            <label for="orderName">Контактное лицо</label>
+            <input type="text"
+                   class="form-control"
+                   id="orderName"
+                   required/>
+          </div>
+          <div class="col-xs-12 col-md-6 form-group">
+            <label for="orderPhone">Номер телефона</label>
+            <input type="tel"
+                   class="form-control"
+                   id="orderPhone"
+                   required/>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12">
+            <h4 class="app-section__subtitle">Тип объекта</h4>
+            <div class="form-inline">
+              <div class="form-group">
+                <label class="radio-inline">
+                  <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                  &nbsp;Квартира
+                </label>
+              </div>
+              <div class="form-group">
+                <label class="radio-inline">
+                  <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                  &nbsp;Коттедж
+                </label>
+              </div>
+              <div class="form-group">
+                <label class="radio-inline">
+                  <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+                  &nbsp;Нежилое помещение
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row u-margin-bottom-double">
+          <div class="col-lg-12">
+            <h4 class="app-section__subtitle">Площадь</h4>
+            <div class="form-inline">
+              <div class="form-group u-margin-right-dooble">
+                <label class="u-block" for="walls">Стены</label>
+                <input type="number"
+                       class="form-control"
+                       id="walls"
+                       required/>
+                <span>м²</span>
+              </div>
+              <div class="form-group u-margin-right-dooble">
+                <label class="u-block" for="ceiling">Потолок</label>
+                <input type="number"
+                       class="form-control"
+                       id="ceiling"
+                       required/>
+                <span>м²</span>
+              </div>
+              <div class="form-group">
+                <label class="u-block" for="slopes">Откосы</label>
+                <input type="number"
+                       class="form-control"
+                       id="slopes"
+                       required/>
+                <span>м²</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12">
+            <button type="submit" class="btn btn-outline u-btn-block-md">Отправить</button>
+            <a href="#" class="btn btn-link u-btn-block-md">Я не знаю размеры. Вызвать замерщика.</a>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Map -->
+  <section class="app-section">
+    map
   </section>
 
   <footer class="app-footer u-bg-blue">

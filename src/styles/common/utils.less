@@ -7,6 +7,10 @@
   padding: 0;
 }
 
+.u-block {
+  display: block !important;
+}
+
 // Colors
 .u-bg {
   &-blue {
@@ -76,9 +80,19 @@
 }
 
 // Spacing
-.u-margin-bottom {
-  &-double {
-    margin-bottom: @spacing-double;
+.u-margin {
+  &-bottom {
+    &-base {
+      margin-bottom: @spacing-base;
+    }
+    &-double {
+      margin-bottom: @spacing-double;
+    }
+  }
+  &-right {
+    &-dooble {
+      margin-right: @spacing-double;
+    }
   }
 }
 
